@@ -45,6 +45,11 @@ namespace WebApplication1
             app.UseAuthorization();
 
             app.MapStaticAssets();
+            //app.MapControllerRoute
+            //(
+            //    name: "Default2",
+            //    pattern: "shop/{controller}/{action}"
+            //);
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}")

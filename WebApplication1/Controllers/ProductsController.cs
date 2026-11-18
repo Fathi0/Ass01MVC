@@ -3,6 +3,7 @@ using WebApplication1.Models;
 
 namespace WebApplication1.Controllers
 {
+[Route("[controller]/ahmed/[action]")]
     public class ProductsController:Controller
     {
         //BaseUrl/Products/GetProductById
