@@ -7,10 +7,17 @@ namespace WebApplication1
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            //Used To Add Built-in MVC Services Inside The Containers
             builder.Services.AddControllersWithViews();
 
-            var app = builder.Build();
+            //Used To Add Built-in Apis Services Inside The Containers
+            //builder.Services.AddControllers();
 
+            //Used To Add Built-in Razor Services Inside The Containers
+            //builder.Services.AddRazorPages();
+
+            var app = builder.Build();
+            //Add Middlewares
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
             {
