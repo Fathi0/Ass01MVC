@@ -9,6 +9,7 @@ namespace WebApplication1
             // Add services to the container.
             //Used To Add Built-in MVC Services Inside The Containers
             builder.Services.AddControllersWithViews();
+            
 
             //Used To Add Built-in Apis Services Inside The Containers
             //builder.Services.AddControllers();
