@@ -1,3 +1,5 @@
+using WebApplication1.Middlewares;
+
 namespace WebApplication1
 {
     public class Program
@@ -19,6 +21,16 @@ namespace WebApplication1
 
             var app = builder.Build();
             //Add Middlewares
+            //Custom Middlewares
+            //app.Use(async (context, next) =>
+            //{
+            //    Console.WriteLine("Hello");
+            //    await next.Invoke(context);
+            //    Console.WriteLine("Bye Bye");
+            //}
+
+            //); 
+            app.UseMiddleware<RequstTime>();
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
             {
